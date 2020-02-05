@@ -12,7 +12,7 @@ describe ("<Card />", ()=>{
 			title="my title" 
 			content="stuff" 
 			/>, div) 
-		// Clean up 
+		// Clean upppppp
 		ReactDOM.unmountComponentAtNode(div); 
 	})
 

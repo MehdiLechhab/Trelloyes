@@ -17,7 +17,7 @@ describe ("<List />", ()=>{
             header="my header" 
             key="r" 
             cards={cardData} />, section) 
-		// Clean up 
+		// Clean uppp
 		ReactDOM.unmountComponentAtNode(section); 
 	})
 

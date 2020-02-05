@@ -9,7 +9,11 @@ exports[`<Card /> snapshot matches expected 1`] = `
   >
     delete
   </button>
-  <h3 />
-  <p />
+  <h3>
+    my title
+  </h3>
+  <p>
+    stuff
+  </p>
 </div>
 `;
