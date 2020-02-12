@@ -7,7 +7,7 @@ function Card(props) {
 		<div className="Card">
 		    <button 
 		    type="button"
-		    >
+		    onClick={() => props.handleDeleteCard()}>
 		    delete
 		    </button>
 		    <h3>{props.title}</h3>
@@ -15,6 +15,8 @@ function Card(props) {
 		</div>
 		)
 }
+
+
 
 export default Card;
 
