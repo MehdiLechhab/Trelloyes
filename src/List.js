@@ -16,6 +16,7 @@ function List(props) {
 	          			title={card.title}
 	          			content={card.content}
 	          			handleDeleteCard={props.handleDeleteCard}
+	          			id={card.id}
 
 	          		/>
 	          	)}

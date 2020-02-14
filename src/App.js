@@ -3,6 +3,13 @@ import './App.css';
 import List from './List';
 import STORE from './store';
 
+function omit(obj, keyToOmit) {
+  return Object.entries(obj).reduce(
+    (newObj, [key, value]) =>
+        key === keyToOmit ? newObj : {...newObj, [key]: value},
+    {}
+  );
+}
 
 class App extends Component {
   state = {
@@ -10,9 +17,25 @@ class App extends Component {
   
   };
 
-  handleDeleteCard = () => {
-    console.log(this.state.store, "delete card clicked")
+
+
+  handleDeleteCard = (id) => {
+    
+    const newArr = this.state.store.lists.map((item) => {
+      item.cardIds = item.cardIds.filter(currentId => currentId !== id
+      )
+      return item;
+    })
+    
+    const newCards = omit(this.state.store.allCards, id)
+    this.setState({
+      store: {
+        lists: newArr,
+        allCards: newCards
+      }
+    })
   };
+
 
   handleAddCard = () => {
     console.log(this.state.store, "add card clicked")
