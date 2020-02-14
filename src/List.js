@@ -22,14 +22,14 @@ function List(props) {
 	          	)}
 	          <button 
 		          type="button" 
-		          className="List-add-button"
-		          onClick={props.handleAddCard}
+				  className="List-add-button"
+		          onClick={() => props.handleAddCard(props.id)}
 		          >
 	            + Add Random Card
 	          </button>
 	        </div>
       </section>
-		)
+	)
 }
 
 export default List;
